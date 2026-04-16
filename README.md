@@ -40,13 +40,13 @@ Explorar o sistema, identificar falhas e documentar comportamentos inesperados c
 
 ## Resumo quantitativo
 
-- Total de bugs: 16
+- Total de bugs: 18
 - High: 3
-- Medium: 10
-- Low: 3
+- Medium: 11
+- Low: 4
 
 Observação: 1 item de severidade Low é um teste de execução do script ([bugs/teste-do-script.md](./bugs/teste-do-script.md)).
-Total de bugs funcionais encontrados na análise exploratória: 15.
+Total de bugs funcionais encontrados na análise exploratória: 17.
 
 Dados sincronizados com o índice em [bugs/index.md](./bugs/index.md).
 
