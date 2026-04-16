@@ -1,0 +1,8 @@
+{
+  "name": "frontend-qa-case-study",
+  "version": "1.0.0",
+  "scripts": {
+    "gen-bug": "node gen-bug.js",
+    "gen-index": "node gen-index.js"
+  }
+}
