@@ -107,3 +107,34 @@ npm run gen-index
 ```
 
 Use o comando manual de índice para reindexação quando houver ajustes feitos diretamente nos arquivos da pasta [bugs](./bugs).
+
+---
+
+## Automação E2E com Cypress
+
+Este repositório inclui uma base inicial de automação para os cenários prioritários de regressão.
+
+Estrutura:
+
+- `cypress/e2e/auth.cy.js`: autenticação e proteção de rotas
+- `cypress/e2e/database.cy.js`: persistência após refresh, duplicidade e arquivamento
+- `cypress/e2e/navigation.cy.js`: navegação para Colmeia Forms
+- `cypress/support/commands.js`: comandos reutilizáveis (login e ações de banco de dados)
+
+Executar interface interativa:
+
+```bash
+npm run cy:open
+```
+
+Executar em modo headless:
+
+```bash
+npm run cy:run
+```
+
+Credenciais de teste podem ser passadas por variáveis de ambiente:
+
+```bash
+CYPRESS_AUTH_EMAIL=qa@test.com CYPRESS_AUTH_PASSWORD=123456 npm run cy:run
+```

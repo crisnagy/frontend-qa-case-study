@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "gen-bug": "node gen-bug.js",
-    "gen-index": "node gen-index.js"
+    "gen-index": "node gen-index.js",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^15.13.1"
   }
 }
