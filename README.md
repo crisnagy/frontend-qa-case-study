@@ -98,8 +98,12 @@ Gerar novo report de bug:
 npm run gen-bug
 ``` 
 
+Observação: ao finalizar o fluxo de criação do bug, o índice em [bugs/index.md](./bugs/index.md) é atualizado automaticamente.
+
 Atualizar o índice de bugs:
 
 ```bash
 npm run gen-index
 ```
+
+Use o comando manual de índice para reindexação quando houver ajustes feitos diretamente nos arquivos da pasta [bugs](./bugs).

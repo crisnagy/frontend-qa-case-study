@@ -6,6 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
+const { execFileSync } = require('child_process');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -144,4 +145,14 @@ ${notes || '-'}
   fs.writeFileSync(filePath, content);
 
   console.log(`\nBug criado em: ${filePath}`);
+
+  const indexScriptPath = path.join(process.cwd(), 'gen-index.js');
+  if (fs.existsSync(indexScriptPath)) {
+    try {
+      console.log('Atualizando index automaticamente...');
+      execFileSync(process.execPath, [indexScriptPath], { stdio: 'inherit' });
+    } catch (error) {
+      console.log('Aviso: bug criado, mas nao foi possivel atualizar o index automaticamente.');
+    }
+  }
 })();
